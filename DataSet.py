@@ -12,7 +12,7 @@ import numpy as np
 
 #创建数据集
 class myDataSet(Dataset):
-    def __init__(self,img_dir,group_size=1000,transform=None):
+    def __init__(self,img_dir,group_size=10000,transform=None):
         self.img_dir=img_dir
         self.images=os.listdir(img_dir)
         self.transform=transform
