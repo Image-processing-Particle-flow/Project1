@@ -315,7 +315,7 @@ axes[0].axis('off')  # 隐藏坐标轴
 
 # 绘制第二个灰度图v_array(56*56)
 axes[1].imshow(v_array, cmap='gray')
-axes[1].set_title('Predict Image')
+axes[1].set_title('Predicted Image')
 axes[1].axis('off')  # 隐藏坐标轴
 
 # 显示图像
@@ -337,7 +337,7 @@ axes[0].axis('off')  # 隐藏坐标轴
 
 # 绘制第二个灰度图 v_array (56x56)
 axes[1].imshow(v_array, cmap='Reds')
-axes[1].set_title('Predict Image')
+axes[1].set_title('Predicted Image')
 axes[1].axis('off')  # 隐藏坐标轴
 
 # 显示图像
