@@ -42,12 +42,12 @@ Tracker=[]
 Trkp=[]
 Truth=[]
 #p->per_imgs
-p=1000
+p=10000
 Emcal=all_imgs[:p]
 Hcal=all_imgs[p:2*p]
 Tracker=all_imgs[2*p:3*p]
 Trkp=all_imgs[3*p:4*p]
-Truth=all_imgs[3*p:4*p]
+Truth=all_imgs[4*p:5*p]
 #我把三张子图合并起来（相当于三个通道）
 X=[]
 for emcal, hcal, tracker ,trkp in zip(Emcal, Hcal, Tracker, Trkp):
@@ -283,7 +283,7 @@ X_pic_ln
 print(min_values)
 print(max_values)
 # 对张量进行最小-最大归一化
-X_pic_t = (X_pic_ln - min_values[:3]) / (max_values[:3] - min_values[:3])
+X_pic_t = (X_pic_ln - min_values[:4]) / (max_values[:4] - min_values[:4])
 
 # 打印归一化后的张量
 print(X_pic_t.shape)
@@ -291,7 +291,7 @@ print(X_pic_t.shape)
 Y_outputs = model(X_pic_t)
 print(Y_outputs.shape)
 
-YY_ln=Y_outputs*(max_values[3]-min_values[3])+min_values[3]
+YY_ln=Y_outputs*(max_values[4]-min_values[4])+min_values[4]
 
 YY=torch.exp(YY_ln)-1
 
