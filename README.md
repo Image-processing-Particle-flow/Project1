@@ -1,4 +1,4 @@
 # Reconstruction of Particle Flow Energy Distribution Using Deep Learning Algorithms
-project1 的任务是处理新的数据集。
-main分支的主要目的是存放一些有关数据读取、处理的函数。
-另外两个分支分别使用MLP和CNN处理数据
+- **[`main.py`](main.py)**, **[`DataSet.py`](DataSet.py)**, and **[`myDataSet.py`](myDataSet.py)** contain the data processing code.
+- **[`Plotter.py`](Plotter.py)** contains the code for data visualization.
+- The **[`Model Implementation`](Model_Implementation)** folder includes the code for various models.
